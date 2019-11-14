@@ -127,7 +127,7 @@ export class Composer {
       return {
         sizeMb: 5,
         size: 5 * 1024 * 1024,
-        count: 10,
+        count: 20,
         oversize: async () => {
           let getAdvanced = 'The files are over 5 MB. Advanced users can send files up to 25 MB.';
           if (!subscription.method) {
@@ -157,7 +157,7 @@ export class Composer {
       return {
         sizeMb,
         size: sizeMb * 1024 * 1024,
-        count: 10,
+        count: 20,
         oversize: async (combinedSize: number) => {
           await Ui.modal.warning('Combined attachment size is limited to 25 MB. The last file brings it to ' + Math.ceil(combinedSize / (1024 * 1024)) + ' MB.');
         },
